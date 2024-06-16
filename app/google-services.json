@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "63001158217",
+    "firebase_url": "https://rentease-6844a-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "rentease-6844a",
+    "storage_bucket": "rentease-6844a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63001158217:android:befda44a40d5dde15a5598",
+        "android_client_info": {
+          "package_name": "com.example.rentease"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhz6bXbACyyGvrFEYo9xNZl6pLQjdY6Ps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63001158217:android:420a1fe5fd5782915a5598",
+        "android_client_info": {
+          "package_name": "com.grpzerotwo.rentease"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhz6bXbACyyGvrFEYo9xNZl6pLQjdY6Ps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
