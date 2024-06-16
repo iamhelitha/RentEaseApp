@@ -33,7 +33,7 @@ android {
 }
 
 dependencies {
-    implementation libs.stripe.android
+    implementation libs.stripe.stripe.android
     implementation libs.picasso
     implementation libs.material.v140
     implementation libs.glide
