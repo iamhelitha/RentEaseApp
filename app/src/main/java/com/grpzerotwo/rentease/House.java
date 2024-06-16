@@ -1,6 +1,8 @@
 package com.grpzerotwo.rentease;
 
-public class House {
+import java.io.Serializable;
+
+public class House implements Serializable {
     private String title;
     private String imageUrl;
     private String description;
@@ -22,6 +24,7 @@ public class House {
     }
 
     // Getters and Setters
+
     public String getTitle() {
         return title;
     }

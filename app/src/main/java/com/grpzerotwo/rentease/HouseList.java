@@ -92,9 +92,9 @@ public class HouseList extends AppCompatActivity {
             return true;
         } else if (id == R.id.action_add) {
             // Handle add button click un comment when they are made lol
-            // Intent intent = new Intent(this, AddHouseActivity.class);
-            // startActivity(intent);
-            return true;
+             Intent intent = new Intent(this, AddHouseActivity.class);
+             startActivity(intent);
+             return true;
         }
         return super.onOptionsItemSelected(item);
     }

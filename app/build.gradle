@@ -33,13 +33,15 @@ android {
 }
 
 dependencies {
-
+    implementation libs.stripe.android
+    implementation libs.picasso
     implementation libs.material.v140
     implementation libs.glide
     implementation libs.lifecycle.livedata.ktx
     implementation libs.lifecycle.viewmodel.ktx
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
+    implementation libs.firebase.storage
     annotationProcessor libs.compiler
     implementation libs.appcompat
     implementation libs.material
