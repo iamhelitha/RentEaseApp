@@ -4,10 +4,13 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -33,6 +36,12 @@ public class HouseAdapter extends RecyclerView.Adapter<HouseAdapter.HouseViewHol
         holder.location.setText(house.getLocation());
         holder.price.setText(String.valueOf(house.getPrice()));
         holder.rooms.setText(String.valueOf(house.getRooms()));
+        holder.title.setText(house.getTitle());
+        holder.description.setText(house.getDescription());
+
+        Glide.with(context)
+             .load(house.getImageUrl())
+             .into(holder.houseImage);
     }
 
     @Override
@@ -41,8 +50,8 @@ public class HouseAdapter extends RecyclerView.Adapter<HouseAdapter.HouseViewHol
     }
 
     public static class HouseViewHolder extends RecyclerView.ViewHolder {
-
-        TextView location, price, rooms;
+        TextView location, price, rooms, title, description;
+        ImageView houseImage;
 
         public HouseViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -50,6 +59,9 @@ public class HouseAdapter extends RecyclerView.Adapter<HouseAdapter.HouseViewHol
             location = itemView.findViewById(R.id.location);
             price = itemView.findViewById(R.id.price);
             rooms = itemView.findViewById(R.id.rooms);
+            title = itemView.findViewById(R.id.title);
+            description = itemView.findViewById(R.id.description);
+            houseImage = itemView.findViewById(R.id.houseImage);
         }
     }
 }

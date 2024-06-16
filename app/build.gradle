@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.grpzerotwo.rentease"
-        minSdk 33
+        minSdk 31
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -23,6 +23,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    buildFeatures{
+        viewBinding true
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -31,6 +34,13 @@ android {
 
 dependencies {
 
+    implementation libs.material.v140
+    implementation libs.glide
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.ktx
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    annotationProcessor libs.compiler
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity

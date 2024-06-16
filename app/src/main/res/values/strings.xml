@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Rent Ease</string>
     <string name="rentEase">RentEase</string>
     <string name="Login">Login</string>
     <string name="email">Email</string>
@@ -9,6 +8,20 @@
     <string name="already_have_an_account_login">Already have an account? Login</string>
     <string name="RegisterNow">Register Now</string>
     <string name="login_to_rent_ease">Login to Rent Ease</string>
-    <string name="logout">logout</string>
     <string name="houses">Houses</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rest_houses">Rest Houses</string>
+    <string name="hotels">Hotels</string>
+    <string name="add">Add</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="rent_ease">Rent Ease</string>
+    <string name="app_name">RentEase</string>
+    <string name="profile">Profile</string>
+    <string name="user_email">User Email</string>
+    <string name="user_detail">Your details are displayed here.</string>
+    <string name="logout">Logout</string>
 </resources>

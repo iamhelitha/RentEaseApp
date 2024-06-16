@@ -12,26 +12,27 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Material3.Dark">
+        android:theme="@style/Theme.Material3.Dark.NoActionBar">
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
         <activity
             android:name=".HouseList"
             android:exported="false" />
         <activity
             android:name=".Register"
             android:exported="false"
-            android:theme="@style/Theme.Material3.Dark" />
+            android:theme="@style/Theme.Material3.Dark.NoActionBar" />
         <activity
             android:name=".Login"
             android:exported="true"
-            android:theme="@style/Theme.Material3.Dark">
+            android:theme="@style/Theme.Material3.Dark.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
     </application>
 
 </manifest>
