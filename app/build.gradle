@@ -33,6 +33,7 @@ android {
 }
 
 dependencies {
+    implementation libs.stripe.android
     implementation libs.stripe.stripe.android
     implementation libs.picasso
     implementation libs.material.v140
@@ -42,6 +43,8 @@ dependencies {
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
     implementation libs.firebase.storage
+    implementation libs.firebase.functions
+    implementation libs.volley
     annotationProcessor libs.compiler
     implementation libs.appcompat
     implementation libs.material

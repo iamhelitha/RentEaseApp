@@ -1,12 +1,12 @@
 package com.grpzerotwo.rentease;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +27,7 @@ public class HouseDetailsActivity extends AppCompatActivity {
     private ImageView btnPickDate;
     private DatabaseReference databaseReference;
     private String houseId;
+    private int price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,7 @@ public class HouseDetailsActivity extends AppCompatActivity {
                     housePrice.setText("$" + house.getPrice());
                     houseRooms.setText(String.valueOf(house.getRooms()));
                     Glide.with(HouseDetailsActivity.this).load(house.getImageUrl()).into(houseImage);
+                    price = house.getPrice(); // Get the price for later use
                 }
             }
 
@@ -85,7 +87,16 @@ public class HouseDetailsActivity extends AppCompatActivity {
         });
 
         rentButton.setOnClickListener(v -> {
-            // Handle rent logic here
+            String title = houseTitle.getText().toString();
+            String location = houseLocation.getText().toString();
+            int nights = Integer.parseInt(nightsInput.getText().toString());
+
+            Intent intent = new Intent(HouseDetailsActivity.this, CheckoutActivity.class);
+            intent.putExtra("title", title);
+            intent.putExtra("location", location);
+            intent.putExtra("price", price);
+            intent.putExtra("nights", nights);
+            startActivity(intent);
         });
     }
 }

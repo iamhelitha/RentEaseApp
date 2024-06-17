@@ -20,6 +20,8 @@ navigationUi = "2.7.7"
 picasso = "2.71828"
 firebaseStorage = "21.0.0"
 stripeAndroid = "20.46.0"
+firebaseFunctions = "21.0.0"
+volley = "1.2.1"
 
 [libraries]
 compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
@@ -42,6 +44,8 @@ picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
 firebase-storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "firebaseStorage" }
 stripe-android = { module = "com.stripe:stripe-android", version.ref = "stripeAndroid" }
 stripe-stripe-android = { module = "com.stripe:stripe-android", version.ref = "stripeAndroid" }
+firebase-functions = { group = "com.google.firebase", name = "firebase-functions", version.ref = "firebaseFunctions" }
+volley = { group = "com.android.volley", name = "volley", version.ref = "volley" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
