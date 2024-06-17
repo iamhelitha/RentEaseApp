@@ -4,7 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CheckoutActivity">
+    tools:context=".HouseDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <ImageView
+        android:id="@+id/house_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
@@ -12,7 +32,7 @@
         android:layout_margin="16dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="8dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/house_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -29,19 +49,18 @@
                 android:paddingBottom="8dp">
 
                 <TextView
-                    android:id="@+id/label_house_title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="House Title:"
+                    android:text="Title:"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/checkout_house_title"
+                    android:id="@+id/house_title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:text="House Title"
                     android:textSize="18sp"/>
             </LinearLayout>
@@ -53,7 +72,29 @@
                 android:paddingBottom="8dp">
 
                 <TextView
-                    android:id="@+id/label_house_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Description:"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/house_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="House Description"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
+
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -62,10 +103,10 @@
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/checkout_house_location"
+                    android:id="@+id/house_location"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:text="House Location"
                     android:textSize="18sp"/>
             </LinearLayout>
@@ -77,20 +118,19 @@
                 android:paddingBottom="8dp">
 
                 <TextView
-                    android:id="@+id/label_house_price"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Price per night:"
+                    android:text="Price:"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/checkout_house_price"
+                    android:id="@+id/house_price"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="Price per night"
+                    android:layout_weight="1"
+                    android:text="House Price"
                     android:textSize="18sp"/>
             </LinearLayout>
 
@@ -101,22 +141,30 @@
                 android:paddingBottom="8dp">
 
                 <TextView
-                    android:id="@+id/label_nights"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Nights:"
+                    android:text="Rooms:"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/checkout_nights"
+                    android:id="@+id/house_rooms"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="Nights"
+                    android:layout_weight="1"
+                    android:text="House Rooms"
                     android:textSize="18sp"/>
             </LinearLayout>
+
+            <EditText
+                android:id="@+id/nights_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter number of nights"
+                android:inputType="number"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -124,36 +172,34 @@
                 android:orientation="horizontal"
                 android:paddingBottom="8dp">
 
-                <TextView
-                    android:id="@+id/label_total_price"
+                <EditText
+                    android:id="@+id/date_input"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Total Price:"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:hint="Pick a date"
+                    android:inputType="date"
+                    android:padding="12dp"/>
 
-                <TextView
-                    android:id="@+id/checkout_total_price"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="Total Price"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/btn_pick_date"
+                    android:layout_width="62dp"
+                    android:layout_height="47dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/baseline_date_range_24"/>
             </LinearLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/checkout_button"
+        android:id="@+id/rent_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:backgroundTint="?attr/colorPrimary"
         android:padding="12dp"
-        android:text="Checkout"
+        android:text="Rent this place"
         android:textColor="@android:color/white"
         android:textSize="16sp"
         app:cornerRadius="8dp"
