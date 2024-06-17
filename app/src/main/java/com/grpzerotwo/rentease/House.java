@@ -1,29 +1,35 @@
 package com.grpzerotwo.rentease;
 
-import java.io.Serializable;
+public class House {
 
-public class House implements Serializable {
+    private String id;
     private String title;
-    private String imageUrl;
     private String description;
     private String location;
     private int price;
     private int rooms;
+    private String imageUrl;
 
     public House() {
         // Default constructor required for calls to DataSnapshot.getValue(House.class)
     }
 
-    public House(String title, String imageUrl, String description, String location, int price, int rooms) {
+    public House(String title, String description, String location, int price, int rooms, String imageUrl) {
         this.title = title;
-        this.imageUrl = imageUrl;
         this.description = description;
         this.location = location;
         this.price = price;
         this.rooms = rooms;
+        this.imageUrl = imageUrl;
     }
 
-    // Getters and Setters
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -31,14 +37,6 @@ public class House implements Serializable {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
     }
 
     public String getDescription() {
@@ -71,5 +69,13 @@ public class House implements Serializable {
 
     public void setRooms(int rooms) {
         this.rooms = rooms;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
