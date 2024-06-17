@@ -42,7 +42,7 @@ public class AddHouseActivity extends AppCompatActivity {
         ivHouseImage = findViewById(R.id.iv_house_image);
         btnChooseImage = findViewById(R.id.btn_choose_image);
         btnAddHouse = findViewById(R.id.btn_add_house);
-        progressBar = findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBar);  // Initialize the ProgressBar
 
         storageReference = FirebaseStorage.getInstance().getReference("house_images");
         databaseReference = FirebaseDatabase.getInstance().getReference("houses");
